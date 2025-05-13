@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* --- NAVBAR (kept as before, with animation) --- */
+.navbar {
+    z-index: 1000;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    position: fixed;
+    opacity: .95;
+    box-shadow: 0px .1px 3px;
+    top: 0;
+    left: 0;
+    animation: navFadeIn 1.1s;
+}
+@keyframes navFadeIn {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.navlogo {
+    height: 45px;
+    width: 90px;
+    margin-left: 30px;
+}
+.navlogo img {
+    height: 45px;
+    width: 90px;
+    animation: logoPop 1.5s;
+}
+@keyframes logoPop {
+    from { transform: scale(0.7) rotate(-15deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(3deg); opacity: 1; }
+    to { transform: scale(1) rotate(0); opacity: 1; }
+}
+.navtext ol {
+    display: flex;
+    gap: 40px;
+    margin-left: 25px;
+    font-family: cursive;
+    color: rgb(75, 84, 81);
+    font-weight: bold;
+}
+.navtext .hov-home a:hover,
+.navtext .hov-courses:hover,
+.navtext .hov-roadmap:hover,
+.navtext .hov-compiler:hover,
+.navtext .hov-competitive:hover,
+.navtext .hov-aiassiatant:hover,
+.navtext .hov-profile:hover {
+    color: orange;
+    transition: color .3s ease;
+    animation: navItemPulse 0.4s;
+}
+@keyframes navItemPulse {
+    0% { color: orange; }
+    50% { color: #f6a933; }
+    100% { color: orange; }
+}
+.navtext ol li { list-style: none; }
+.navtext ol li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color .3s ease;
+}
+.navtext ol li a:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+.navtext ol li a::after {
+    display: none !important;
+}
+.navtext ol li a {
+    text-decoration: none !important;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1100px) {
+    .navtext ol {
+        gap: 22px;
+        font-size: 1rem;
+    }
+    .navlogo {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-bottom: 7px;
+    }
+    .navtext ol {
+        margin-left: 10px;
+        gap: 12px;
+        font-size: 0.97em;
+        flex-wrap: wrap;
+    }
+    .navlogo {
+        margin: 10px 0 0 10px;
+    }
+}
+
+
+/* BODY BG */
+.body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../Image/images.jpg);
+    background-size: fixed;
+    padding-top: 60px;
+}
+
+/* TOPP PIC */
+.toppic {
+    display: flex;
+    height: 330px;
+    width: 100%;
+    background-color: aquamarine;
+    align-items: center;
+    box-shadow: 0px 10px 7px black;
+    position: relative;
+    overflow: hidden;
+    animation: toppicFadeIn 1.2s;
+}
+@keyframes toppicFadeIn {
+    from { opacity: 0; transform: translateY(-75px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.toppic img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    min-height: 180px;
+    border-radius: 0 0 100px 0;
+    filter: brightness(0.93) contrast(1.1) blur(0.2px);
+    animation: toppicImgIn 1.8s cubic-bezier(.6,0,.4,1);
+}
+@keyframes toppicImgIn {
+    from { opacity: 0; transform: scale(1.07);}
+    to { opacity: 1; transform: scale(1);}
+}
+.toppic-text {
+    position: absolute;
+    color: rgb(253, 102, 31);
+    padding-left: 50px;
+    z-index: 2;
+    text-shadow: 1px 2px 7px #fff9, 0 0 2px #0006;
+    animation: toppicTextIn 1.5s cubic-bezier(.6,0,.4,1);
+}
+@keyframes toppicTextIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.toppic-text p:first-child {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+/* COURSE CARD COMMONS */
+.c-course, .cpp-course, .python-course, .html-course, .css-course {
+    display: grid;
+    grid-template-columns: 1.12fr 1fr;
+    align-items: center;
+    min-width: 0;
+    min-height: 0;
+    height: 300px;
+    background-color: azure;
+    margin: 70px 4vw 0 4vw;
+    box-shadow: 0px 4px 13px 0px #0002, 0px 0px 5px black;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    animation: courseFadeIn 1.2s;
+    transition: box-shadow 0.4s;
+}
+@keyframes courseFadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.c-course:hover, .cpp-course:hover, .python-course:hover, .html-course:hover, .css-course:hover {
+    box-shadow: 0px 10px 30px 2px #6be4ffc3, 0px 0px 7px #ff9100c2;
+    transition: box-shadow 0.5s, transform 0.5s;
+    transform: scale(1.015) translateY(-8px) rotate(-1deg);
+}
+
+/* Text Section */
+.c-course-text, .cpp-course-text, .python-course-text, .html-course-text, .css-course-text {
+    margin: 30px 0px 0px 30px;
+    z-index: 2;
+    animation: fadeFromLeft 1.1s;
+}
+@keyframes fadeFromLeft {
+    from { opacity: 0; transform: translateX(-60px);}
+    to { opacity: 1; transform: translateX(0);}
+}
+.c-course-text-middle, .cpp-course-text-middle, .python-course-text-middle, .html-course-text-middle, .css-course-text-middle {
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 23px;
+}
+
+/* Image Section */
+.c-course-pic, .cpp-course-pic, .python-course-pic, .html-course-pic, .css-course-pic {
+    display: flex;
+    width: 95%;
+    max-width: 495px;
+    min-width: 120px;
+    height: 260px;
+    max-height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0px 7px 24px #0baab333, 0 0 8px #fff4;
+    margin-left: auto;
+    margin-right: 16px;
+    filter: brightness(0.98) contrast(1.06);
+    animation: fadeFromRight 1.2s cubic-bezier(.4,0,.2,1);
+    transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+@keyframes fadeFromRight {
+    from { opacity: 0; transform: translateX(80px) scale(1.08);}
+    to { opacity: 1; transform: translateX(0) scale(1);}
+}
+.c-course-pic:hover, .cpp-course-pic:hover, .python-course-pic:hover, .html-course-pic:hover, .css-course-pic:hover {
+    transform: scale(1.05) rotate(1.5deg);
+    box-shadow: 0px 14px 32px 3px #58d8ffac, 0 0 18px #ff9100c2;
+    transition: box-shadow 0.5s, transform 0.3s;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 135px;
+    background: linear-gradient(96deg, rgb(248, 115, 54) 70%, #f9d164 100%);
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    box-shadow: 0px 2px 8px #0baab366;
+    cursor: pointer;
+    animation: buttonPop 1.2s;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+@keyframes buttonPop {
+    0% {transform: scale(0.7);}
+    80% {transform: scale(1.08);}
+    100% {transform: scale(1);}
+}
+.button:hover {
+    box-shadow: 0px 0px 16px 4px #ff910088;
+    transform: scale(1.08);
+    background: linear-gradient(96deg, #fdc858 70%, #f96d00 100%);
+    color: #2b2b2b;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s, color 0.2s;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 1100px) {
+    .c-course, .cpp-course, .python-course, .html-course, .css-course {
+        margin: 48px 2vw 0 2vw;
+        height: 240px;
+        border-radius: 11px;
+    }
+    .c-course-pic, .cpp-course-pic, .python-course-pic, .html-course-pic, .css-course-pic {
+        height: 180px;
+        max-width: 330px;
+        min-width: 70px;
+        border-radius: 10px;
+    }
+    .c-course-text, .cpp-course-text, .python-course-text, .html-course-text, .css-course-text {
+        margin: 18px 0px 0px 12px;
+        font-size: 15px;
+    }
+    .button {
+        height: 34px;
+        width: 110px;
+        font-size: 15px;
+        margin-top: 18px;
+    }
+}
+
+/* Responsive: Stacking on Mobile */
+@media (max-width: 750px) {
+    .body {
+        padding-top: 65px;
+    }
+    .toppic {
+        flex-direction: column;
+        height: auto;
+        min-height: 140px;
+        padding-bottom: 18px;
+    }
+    .toppic img {
+        height: 120px;
+        object-fit: cover;
+        border-radius: 0 0 30px 0;
+    }
+    .toppic-text {
+        position: static;
+        padding: 8px 2vw 0 2vw;
+        text-align: left;
+    }
+    .toppic-text p:first-child {
+        font-size: 23px;
+    }
+    .toppic-text p:nth-child(3) {
+        font-size: 14px;
+    }
+    .c-course, .cpp-course, .python-course, .html-course, .css-course {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 190px;
+        margin: 20px 1vw 0 1vw;
+        border-radius: 14px;
+        padding-bottom: 16px;
+    }
+    .c-course-text, .cpp-course-text, .python-course-text, .html-course-text, .css-course-text {
+        margin: 18px 4vw 0px 4vw;
+        font-size: 14px;
+    }
+    .c-course-pic, .cpp-course-pic, .python-course-pic, .html-course-pic, .css-course-pic {
+        margin: 12px auto 0 auto;
+        width: 98vw;
+        max-width: 340px;
+        height: 130px;
+        min-width: 90px;
+        max-height: 160px;
+        border-radius: 8px;
+    }
+    .button {
+        height: 28px;
+        width: 85vw;
+        max-width: 200px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+}
+
+/* Responsive: Ultra-small screens */
+@media (max-width: 450px) {
+    .toppic {
+        height: 90px;
+        padding-bottom: 4px;
+    }
+    .toppic img {
+        height: 60px;
+        border-radius: 0 0 12px 0;
+    }
+    .toppic-text p:first-child {
+        font-size: 15px;
+    }
+    .c-course-pic, .cpp-course-pic, .python-course-pic, .html-course-pic, .css-course-pic {
+        min-width: 40px;
+        max-width: 92vw;
+        height: 80px;
+        max-height: 120px;
+    }
+    .body {
+        padding-top: 67px;
+    }
+}

@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - C ~ Course</title>
+    <link href="../img/EduHub.png" rel="icon">  
+    <link rel="stylesheet" href="../css/c-courses.css">
+    
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navlogo">
+            <img src="../Image/ChatGPT Image2 Apr 4, 2025, 10_37_33 AM.png">
+        </div>
+
+        <div class="navtext">
+            <ol>
+                <li class="hov-home"><a href="home.html">Home</a></li>
+                <li class="hov-courses"><a href="courses.html">Courses</a></li>
+                <li class="hov-roadmap"><a href="roadmap.html">Roadmap</a></li>
+                <li class="hov-compiler"><a href="compiler.html">Compiler</a></li>
+                <li class="hov-competitive"><a href="competitive.html">Competitive</a></li>
+                <li class="hov-aiassiatant"><a href="ai-assistant.html">AI Assistant</a></li>
+                <li class="hov-profile"><a href="profile.html">Profile</a></li>
+
+            </ol>
+        </div>
+    </div>
+
+    <!-- navbar------------------ -->
+
+
+    <div class="body">
+
+        <div class="top">
+            <img height="300px" width="100%" src="../Image/Courses top.jpg">
+        </div>
+
+        <div class="topic">
+
+            <img height="500px" width="100%" src="../Image/EduHub Presentation pic-Picsart-AiImageEnhancer.jpg">
+
+            <div class="topic-text">
+                <p style="font-size: 26px; color: orangered;">Coureses Plan <br><br><br></p>
+                <p style="grid-column: 1/2; font-size: 18px; line-height: 40px;">▢ &nbsp&nbsp Introduction <br>▢
+                    &nbsp&nbsp Variables <br>▢ &nbsp&nbsp Data Types <br>▢ &nbsp&nbsp Input
+                    and Output <br>▢ &nbsp&nbsp Operations <br>▢ &nbsp&nbsp Conditional Statements </p>
+                <p style="grid-column: 2/3; font-size: 18px; line-height: 40px;">▢ &nbsp&nbsp Loops <br>▢ &nbsp&nbsp
+                    Functions <br>▢ &nbsp&nbsp
+                    Recursion <br>▢ &nbsp&nbsp Array <br>▢ &nbsp&nbsp String <br>▢ &nbsp&nbsp Pointer</p>
+            </div>
+        </div>
+
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Introduction</p>
+            <div class="line"></div>
+            <p>C is a procedural programming language initially developed by Dennis Ritchie in the year 1972 at Bell
+                Laboratories of AT&T Labs. It was mainly developed as a system programming language to write the UNIX
+                operating system.</p>
+            <p style="font-size: 19px; color: aqua;"><br><br>▣ The main features of the C language include :<br><br></p>
+
+            <ul>
+                <li>General Purpose and Portable</li>
+                <li>procedural Programming language</li>
+                <li>Low-level Memory Access</li>
+                <li>Fast Speed</li>
+                <li>Clean Syntax</li>
+            </ul>
+
+
+            <p><br>These features make the C language suitable for system programming like an operating system or
+                compiler development.</p>
+
+            <p style="font-size: 19px; color:aqua;"><br><br>▣ Why Should We Learn C ?</p>
+            <p><br>Many later languages have borrowed syntax/features directly or indirectly from the C language like
+                the syntax of Java, PHP, JavaScript, and many other languages that are mainly based on the C language.
+                C++
+                is nearly a superset of C language (Only a few programs may compile in C, but not in C++).<br>So, if a
+                person learns C programming first, it will help them to learn any modern programming language as well.
+                Also, learning C helps to understand a lot of the underlying architecture of the operating system like
+                pointers, working with memory locations, etc.</p>
+        </div>
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Variables</p>
+            <div class="line"></div>
+
+            <p>In C, variable is a name given to the memory location to easily store data and access it when required.
+                It allows us to use the memory without having to memorize the exact memory address. A variable name can
+                be used anywhere as a substitute in place of the value it stores.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Create Variables :</p>
+            <p><br>To create a variable in C, we have to specify its name and the type of data it is going to store.
+                This is called variable declaration.We can also create multiple variables of same in a single statement
+                by
+                separating them using comma.C provides a set of different data type that are able to store almost all
+                kind of data. For example, integers are stored as int type, decimal numbers are stored by float and
+                double data types, characters are stored as char data type.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Rules for Naming Variables :</p>
+            <p><br>We can assign any name to the variable as long as it follows the following rules:<br><br></p>
+
+            <ul>
+                <li>A variable name must only contain alphabets, digits, and underscore.</li>
+                <li>A variable name must start with an alphabet or an underscore only. It cannot start with a digit.
+                </li>
+                <li>No white space is allowed within the variable name.</li>
+                <li>A variable name must not be any reserved word or keyword.</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Initialization & Updating :</p>
+            <p><br>No useful data is stored inside a variable that is just declared. We have to initialize it to store
+                some meaningful value to the variable. It is done using assignment "operator = ".<br><br>We can also
+                update
+                the value of a variable with new value whenever needed by using the assignment "operator = ".</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Constants :</p>
+            <p><br>We know that we can change the value stored by any variable anytime, but C also provides some
+                variables whose value cannot be changed. These variables are called constants and are created simply by
+                prefixing
+                "const" keyword in variable declaration.</p>
+        </div>
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Data Types</p>
+            <div class="line"></div>
+
+            <p>Each variable in C has an associated data type. It specifies the type of data that the variable can store
+                like integer, character, floating, double, etc.</p>
+            <p><br>C is a statically type language where each variable’s type must be specified at the declaration and
+                once specified, it cannot be changed. This is because each data type requires different amounts of
+                memory and
+                allows type specific operations.</p>
+
+            <table>
+                <tr>
+                    <th>Types</th>
+                    <th>Description</th>
+                    <th>Data Types</th>
+                </tr>
+                <tr>
+                    <td>Primitive Data Types</td>
+                    <td>Primitive data types are the most basic data types that are used for representing simple values.
+                    </td>
+                    <td>int, char, float, double, void</td>
+                </tr>
+                <tr>
+                    <td>Derived Types</td>
+                    <td>The data types that are derived from the primitive or built-in datatypes are referred to as
+                        Derived Data Types.</td>
+                    <td>array, pointers, function</td>
+                </tr>
+                <tr>
+                    <td>User Defined Data Types</td>
+                    <td>The user-defined data types are defined by the user himself.</td>
+                    <td>structure, union, enum</td>
+                </tr>
+            </table>
+
+            <p><br><br>In this article, we will discuss the basic (primary) data types in C.</p>
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Integer Data Type</p>
+            <p><br>The integer datatype in C is used to store the integer numbers (any number including positive,
+                negative and zero without decimal part). Octal values, hexadecimal values, and decimal values can also
+                be stored
+                in int data type in C.<br><br></p>
+
+            <ul>
+                <li>Range: -2,147,483,648 to 2,147,483,647</li>
+                <li>Size: 4 bytes</li>
+                <li>Format Specifier: %d</li>
+            </ul>
+
+            <p style="font-size: 19px;"><br>The integer data type can also be used as:<br><br></p>
+            <ol>
+                <li>unsigned int: It can store the data values from zero to positive numbers, but it can’t store
+                    negative values
+                </li>
+                <li>short int: It is lesser in size than the int by 2 bytes so can only store values from -32,768 to
+                    32,767.</li>
+                <li>long int: Larger version of the int datatype so can store values greater than int.</li>
+                <li>unsigned short int: Similar in relationship with short int as unsigned int with int.</li>
+            </ol>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Character Data Type</p>
+            <p><br>Character data type allows its variable to store only a single character. The size of the character
+                is 1 byte. It is the most basic data type in C. It stores a single character and requires a single byte
+                of
+                memory in almost all compilers.<br><br></p>
+            <ul>
+                <li>Range: (-128 to 127) or (0 to 255)</li>
+                <li>Size: 1 byte</li>
+                <li>Format Specifier: %c</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Float Data Type</p>
+            <p><br>In C programming, float data type is used to store single precision floating-point values. These
+                values are decimal and exponential numbers.<br><br></p>
+            <ul>
+                <li>Range: 1.2E-38 to 3.4E+38</li>
+                <li>Size: 4 bytes</li>
+                <li>Format Specifier: %f</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Double Data Type</p>
+            <p><br>The double data type in C is used to store decimal numbers (numbers with floating point values) with
+                double precision. It can easily accommodate about 16 to 17 digits after or before a decimal
+                point.<br><br></p>
+
+            <ul>
+                <li>Range: 1.7E-308 to 1.7E+308</li>
+                <li>Size: 8 bytes</li>
+                <li>Format Specifier: %lf</li>
+            </ul>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Void Data Type</p>
+            <p><br>The void data type in C is used to indicate the absence of a value. Variables of void data type are
+                not allowed. It can only be used for pointers and function return type and parameters.<br>Void function
+                means it doesn’t return any value.</p>
+        </div>
+
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Input and Output</p>
+            <div class="line"></div>
+
+
+            <p>In C programming, input and output operations refer to reading data from external sources and writing
+                data to external destinations outside the program. C provides a standard set of functions to handle
+                input from the user and output to the screen or to files. These functions are part of the standard
+                input/output library "stdio.h".<br>In C, there are many functions used for input and output in different
+                situations but the most commonly used functions for Input/Output are scanf() and printf() respectively.
+            </p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Standard Output Function – printf ( )</p>
+            <p><br>The printf() function is used to print formatted output to the standard output stdout (which is
+                generally the console screen). It is one of the most commonly used functions in C.<br><br>Syntax :
+                printf(“formatted_string”, variables/values);</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Standard Input Function – scanf ( )</p>
+            <p><br>scanf () is used to read user input from the console. It takes the format string and the addresses of
+                the
+                variables where the input will be stored.<br><br>Syntax : scanf(“formatted_string”,
+                address_of_variables/values);<br><br>Remember that this function takes the address of the arguments
+                where the read value is to be stored.</p>
+        </div>
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Operators</p>
+            <div class="line"></div>
+
+            <p>In C language, operators are symbols that represent some kind of operations to be performed. They are the
+                basic components of the C programming. In this article, we will learn about all the operators in C with
+                examples.
+            </p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ What is an Operator in C ?</p>
+            <p><br>A C operator can be defined as the symbol that helps us to perform some specific mathematical,
+                relational, bitwise, conditional, or logical computations on values and variables. The values and
+                variables used with operators are called operands. So, we can say that the operators are the symbols
+                that perform operations on operands.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Types of Operators in C</p>
+            <p><br>C language provides a wide range of built in operators that can be classified into 6 types based on
+                their functionality. <br>The main 4 operators are:</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>1. Arithmetic Operators : </p>
+            <p><br>The arithmetic operators are used to perform arithmetic/mathematical operations on operands.<br>There
+                are 9 arithmetic operators in C language:</p>
+
+            <table class="arithmetic-op">
+                <tr>
+                    <th>S. No.</td>
+                    <th>Symbol</th>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>+</td>
+                    <td>Plus</td>
+                    <td>Adds two numeric values.</td>
+                    <td>a + b</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>-</td>
+                    <td>Minus</td>
+                    <td>Subtracts right operand from left operand.</td>
+                    <td>a - b</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>*</td>
+                    <td>Multiply</td>
+                    <td>Multiply two numeric values.</td>
+                    <td>a * b</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>/</td>
+                    <td>Divide</td>
+                    <td>Divide two numeric values.</td>
+                    <td>a / b</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>%</td>
+                    <td>Modulus</td>
+                    <td>Returns the remainder after diving the left operand with the right operand.</td>
+                    <td>a % b</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>+</td>
+                    <td>Unary Plus</td>
+                    <td>Used to specify the positive values.</td>
+                    <td>+a</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>-</td>
+                    <td>Unary Minus</td>
+                    <td>Flips the sign of the value.</td>
+                    <td>-a</td>
+                </tr>
+                <tr>
+                    <td>8.</td>
+                    <td>++</td>
+                    <td>Increment</td>
+                    <td>Increases the value of the operand by 1.</td>
+                    <td>a++</td>
+                </tr>
+                <tr>
+                    <td>9.</td>
+                    <td>--</td>
+                    <td>Decrement</td>
+                    <td>Decreases the value of the operand by 1.</td>
+                    <td>a--</td>
+                </tr>
+            </table>
+
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>2. Relational Operators : </p>
+            <p><br>The relational operators in C are used for the comparison of the two operands. All these operators
+                are binary operators that return true or false values as the result of comparison.<br>These are a total
+                of 6
+                relational operators in C:</p>
+
+            <table class="relational-op">
+                <tr>
+                    <th>S. No.</th>
+                    <th>Symbol</th>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>
+                        < </td>
+                    <td>Less than</td>
+                    <td>Returns true if the left operand is less than the right operand. Else false</td>
+                    <td>a < b</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>></td>
+                    <td>Greater than</td>
+                    <td>Returns true if the left operand is greater than the right operand. Else false </td>
+                    <td>a > b</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>
+                        <= </td>
+                    <td>Less than or equal to</td>
+                    <td>Returns true if the left operand is less than or equal to the right operand. Else false </td>
+                    <td>a <= b</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>>=</td>
+                    <td>Greater than or equal to</td>
+                    <td>Returns true if the left operand is greater than or equal to right operand. Else false </td>
+                    <td>a >= b</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>==</td>
+                    <td>Equal to</td>
+                    <td>Returns true if both the operands are equal.</td>
+                    <td>a == b</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>!=</td>
+                    <td>Not equal to</td>
+                    <td>Returns true if both the operands are NOT equal.</td>
+                    <td>a != b</td>
+                </tr>
+            </table>
+
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>3. Logical Operator : </p>
+            <p><br>Logical Operator are used to combine two or more conditions/constraints or to complement the
+                evaluation of the original
+                condition in consideration. The result of the operation of a logical operator is a Boolean value either
+                true or false.<br>There are 3 logical operators in C:</p>
+
+            <table class="logical-op">
+                <tr>
+                    <th>S. No.</th>
+                    <th>Symbol</th>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+
+                <tr>
+                    <td>1.</td>
+                    <td>&&</td>
+                    <td>Logical AND</td>
+                    <td>Returns true if both the operands are true.</td>
+                    <td>a && b</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>||</td>
+                    <td>Logical OR</td>
+                    <td>Returns true if both or any of the operand is true.</td>
+                    <td>a || b</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>!</td>
+                    <td>Logical NOT</td>
+                    <td>Returns true if the operand is false.</td>
+                    <td>!a</td>
+                </tr>
+            </table>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>4. Assignment Operators: </p>
+            <p><br>Assignment Operators are used to assign value to a variable. The left side operand of the assignment
+                operator is a
+                variable and the right side operand of the assignment operator is a value. The value on the right side
+                must be of the same data type as the variable on the left side otherwise the compiler will raise an
+                error.<br>The assignment operators can be combined with some other operators in C to provide multiple
+                operations using single operator. These operators are called compound operators.<br>The main 7
+                assignment operators are:</p>
+
+
+            <table class="assignment-op">
+                <tr>
+                    <th>S. No.</th>
+                    <th>Symbol</th>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>=</td>
+                    <td>Simple Assignment</td>
+                    <td>Assign the value of the right operand to the left operand.</td>
+                    <td>a = b</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>+=</td>
+                    <td>Plus and assign</td>
+                    <td>Add the right operand and left operand and assign this value to the left operand.
+                    </td>
+                    <td>a += b</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>-=</td>
+                    <td>Minus and assign</td>
+                    <td>Subtract the right operand and left operand and assign this value to the left operand.</td>
+                    <td>a -= b</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>*=</td>
+                    <td>Multiply and assign</td>
+                    <td>Multiply the right operand and left operand and assign this value to the left operand.</td>
+                    <td>a *= b</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>/=</td>
+                    <td>Divide and assign</td>
+                    <td>Divide the left operand with the right operand and assign this value to the left operand.</td>
+                    <td>a /= b</td>
+                </tr>
+                <tr>
+                    <td>6.</td>
+                    <td>%=</td>
+                    <td>Modulus and assign</td>
+                    <td>Assign the remainder in the division of left operand with the right operand to the left operand.
+                    </td>
+                    <td>a %= b</td>
+                </tr>
+                <tr>
+                    <td>7.</td>
+                    <td>&=</td>
+                    <td>AND and assign</td>
+                    <td>Performs bitwise AND and assigns this value to the left operand.</td>
+                    <td>a &= b</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Conditional Statements</p>
+            <div class="line"></div>
+
+            <p>In C, programs can choose which part of the code to execute based on some condition. This ability is
+                called decision making and the statements used for it are called conditional statements. These
+                statements evaluate one or more conditions and make the decision whether to execute a block of code or
+                not.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Types of Conditional Statements in C</p>
+            <p><br>There are many different types of conditional statements available in C language:</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>1. if in C : </p>
+            <p><br>The if statement is the simplest decision-making statement. It is used to decide whether a certain
+                statement or block of statements will be executed or not i.e if a certain condition is true then a block
+                of statements is executed otherwise not.<br>A condition is any expression that evaluates to either a
+                true or false (or values convertible to true or flase).<br><br>The expression inside () parenthesis is
+                the
+                condition and set of statements inside {} braces is its body. If the condition is true, only then the
+                body will be executed.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>2. if-else in C : </p>
+            <p><br>The ifstatement alone tells us that if a condition is true, it will execute a block of statements and
+                if
+                the condition is false, it won’t. But what if we want to do something else when the condition is false?
+                Here comes the C elsestatement. We can use the elsestatement with the ifstatement to execute a block of
+                code when the condition is false. The if-else statement consists of two blocks, one for false expression
+                and one for true expression.<br><br>The block of code following the else statement is executed as the
+                condition present in the if statement is false.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>3. Nested if-else in C : </p>
+            <p><br>A nested if in C is an if statement that is the target of another if statement. Nested if statements
+                mean an if statement inside another if statement. Yes, C allow us to nested if statements within if
+                statements, i.e, we can place an if statement inside another if statement.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>4. if-else-if Ladder in C : </p>
+            <p><br>The if else if statements are used when the user has to decide among multiple options. The C if
+                statements are executed from the top down. As soon as one of the conditions controlling the if is true,
+                the statement associated with that if is executed, and the rest of the C else-if ladder is bypassed. If
+                none of the conditions is true, then the final else statement will be executed. if-else-if ladder is
+                similar to the switch statement.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>5. switch Statement in C : </p>
+            <p><br>The switch case statement is an alternative to the if else if ladder that can be used to execute the
+                conditional code based on the value of the variable specified in the switch statement. The switch block
+                consists of cases to be executed based on the value of the switch variable.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>6. Conditional Operator in C : </p>
+            <p><br>The conditional operator is used to add conditional code in our program. It is similar to the if-else
+                statement. It is also known as the ternary operator as it works on three operands.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>7. Jump Statements in C : </p>
+            <p><br>These statements are used in C for the unconditional flow of control throughout the functions in a
+                program. They support four types of jump statements:</p>
+
+            <p style="font-size: 19px; color:yellowgreen"><br><br>A) break : </p>
+            <p><br>This loop control statement is used to terminate the loop. As soon as the break statement is
+                encountered
+                from within a loop, the loop iterations stop there, and control returns from the loop immediately to the
+                first statement after the loop.</p>
+
+            <p style="font-size: 19px; color:yellowgreen;"><br><br>B) continue : </p>
+            <p><br>This loop control statement is just like the break statement. The continue statement is opposite to
+                that of the break statement, instead of terminating the loop, it forces to execute the next iteration of
+                the loop.
+                As the name suggests the continue statement forces the loop to continue or execute the next iteration.
+                When the continue statement is executed in the loop, the code inside the loop following the continue
+                statement will be skipped and the next iteration of the loop will begin.</p>
+
+            <p style="font-size: 19px; color:yellowgreen;"><br><br>C) goto : </p>
+            <p><br>The goto statement in C also referred to as the unconditional jump statement can be used to jump from
+                one point to another within a function.</p>
+
+            <p style="font-size: 19px; color:yellowgreen;"><br><br>D) return : </p>
+            <p><br>The return in C returns the flow of the execution to the function from where it is called. This
+                statement does not mandatorily need any conditional statements. As soon as the statement is executed,
+                the flow of the program stops immediately and returns the control from where it was called. The return
+                statement may or may not return anything for a void function, but for a non-void function, a return
+                value must be returned.</p>
+        </div>
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Loops</p>
+            <div class="line"></div>
+
+            <P>In C programming, there is often a need for repeating the same part of the code multiple times. For
+                example, to print a text three times, we have to use printf() three times. vBut if we say to write this
+                20 times, it will take some time to write statement. Now imagine writing it 100 or 1000 times. Then it
+                becomes a really hectic task to write same statements again and again. To solve such kind of problems,
+                we have loops in programming languages.</P>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ What are loops in C ?</p>
+            <p><br>Loops in C programming are used to repeat a block of code until the specified condition is met. It
+                allows
+                programmers to execute a statement or group of statements multiple times without writing the code again
+                and again.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Types of Loops in C</p>
+            <p><br>There are 3 looping statements in C:<br><br></p>
+            <ol>
+                <li>for Loop</li>
+                <li>while Loop</li>
+                <li>do-while Loop</li>
+            </ol>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ for Loop</p>
+            <p><br>for loop in C programming is a repetition control structure that allows programmers to write a loop
+                that will
+                be executed a specific number of times. It enables programmers to perform n number of repetitions in a
+                single line. for loop is entry-controlled loop, which means that the condition is checked before the
+                loop’s body executes.</p>
+
+            <p><br>Syntax :<br> for (initialization; condition; updation) {<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// body of for loop<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>The various parts of the for loop are:<br><br></p>
+
+            <ul>
+                <li>Initialization: Initialize the variable to some initial value.</li>
+                <li>Test Condition: This specifies the test condition. If the condition evaluates to true, then body of
+                    the loop is executed. If evaluated false, loop is terminated.</li>
+                <li>Update Expression: After the execution loop’s body, this expression increments/decrements the loop
+                    variable by some value.</li>
+                <li>Body of Loop: Statements to repeat. Generally enclosed inside {} braces.</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ while Loop</p>
+            <p><br>A while loop is a block of code to perform repeated task till given condition is true. When condition
+                become false it terminates. while loop is also an entry-controlled loop in which the condition is
+                checked before entering the body.</p>
+
+            <p><br>Syntax : <br>while (condition) {<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // Body of the loop<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</p>
+
+            <p><br>Only the condition is the part of while loop syntax, we have to initialize and update loop variable
+                manually.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ do-while Loop</p>
+            <p><br>The do-while loop is similar to a while loop, but the difference is that do-while loop tests
+                condition after entering the body at the end. do-while loop is exit-controlled loop, which means that
+                the condition is checked after executing the loop body. Due to this, the loop body will execute at least
+                once irrespective of the test condition.</p>
+
+            <p><br>Syntax :<br>do {<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp // Body of the loop<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} while (condition);</p>
+
+            <p><br>Like while loop, only the condition is the part of do while loop syntax, we have to do the
+                initialization
+                and updating of loop variable manually.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Nested Loops</p>
+            <p><br>Nesting loops means placing one loop inside another. The inner loop runs fully for each iteration of
+                the outer
+                loop. This technique is helpful when you need to perform multiple iterations within each cycle of a
+                larger loop, like when working with a two-dimensional array or performing tasks that require multiple
+                levels of iteration.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Loop Control Statements</p>
+            <p><br>Loop control statements in C programming are used to change execution from its normal sequence.</p>
+
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>break</td>
+                    <td>The break statement is used to terminate the loop statement.</td>
+                </tr>
+                <tr>
+                    <td>continue</td>
+                    <td>When encountered, the continue statement skips the remaining body and jumps to the next
+                        iteration of the loop.</td>
+                </tr>
+                <tr>
+                    <td>goto</td>
+                    <td>goto statement transfers the control to the labeled statement.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Functions</p>
+            <div class="line"></div>
+
+            <p>A function in C is a set of statements that when called perform some specific tasks. It is the basic
+                building block of a C program that provides modularity and code reusability. The programming statements
+                of a function are enclosed within { } braces, having certain meanings and performing certain operations.
+                They are also called subroutines or procedures in other languages.<br>In this article, we will learn
+                about functions, function definition. declaration, arguments and parameters, return values, and many
+                more.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Syntax of Functions in C</p>
+            <p><br>The syntax of function can be divided into 3 aspects:<br></p>
+
+            <ol>
+                <li>Function Declaration</li>
+                <li>Function Definition</li>
+                <li>Function Calls</li>
+            </ol>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Function Declarations</p>
+            <p><br>In a function declaration, we must provide the function name, its return type, and the number and
+                type of
+                its parameters. A function declaration tells the compiler that there is a function with the given name
+                defined somewhere else in the program.</p>
+            <p><br>Syntax: return_type name_of_the_function (parameter_1, parameter_2);</p>
+            <p><br>The parameter name is not mandatory while declaring functions. We can also declare the function
+                without
+                using the name of the data variables.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Function Definition</p>
+            <p><br>The function definition consists of actual statements which are executed when the function is called
+                (i.e. when the program control comes to the function).<br>A C function is generally defined and declared
+                in a single step because the function definition always starts with the function declaration so we do
+                not need to declare it explicitly.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Function Call</p>
+            <p><br>A function call is a statement that instructs the compiler to execute the function. We use the
+                function name and parameters in the function call.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Function Return Type</p>
+            <p><br>Function return type tells what type of value is returned after all function is executed. When we
+                don’t want to return a value, we can use the void data type.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Function Arguments</p>
+            <p><br>Function Arguments (also known as Function Parameters) are the data that is passed to a function.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Conditions of Return Types and Arguments</p>
+            <p><br>In C programming language, functions can be called either with or without arguments and might return
+                values. They may or might not return values to the calling functions.<br><br></p>
+
+            <ol>
+                <li>Function with no arguments and no return value</li>
+                <li>Function with no arguments and with return value</li>
+                <li>Function with argument and with no return value</li>
+                <li>Function with arguments and with return value</li>
+            </ol>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Types of Functions</p>
+            <p><br>There are two types of functions in C:<br><br></p>
+            <ol>
+                <li>Library Functions</li>
+                <li>User Defined Functions</li>
+            </ol>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>1. Library Function : </p>
+            <p><br>A library function is also referred to as a “built-in function”. A compiler package already exists
+                that contains these functions, each of which has a specific meaning and is included in the package.
+                Built-in functions have the advantage of being directly usable without being defined, whereas
+                user-defined functions must be declared and defined before being used.</p>
+
+            <p style="font-size: 19px;"><br>Advantages of C library functions : <br><br></p>
+            <ul>
+                <li>C Library functions are easy to use and optimized for better performance.</li>
+                <li>C library functions save a lot of time i.e, function development time.</li>
+                <li>C library functions are convenient as they always work.</li>
+            </ul>
+
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>2. User Defined Function :</p>
+            <p><br>Functions that the programmer creates are known as User-Defined functions or “tailor-made functions”.
+                User-defined functions can be improved and modified according to the need of the programmer. Whenever we
+                write a function that is case-specific and is not defined in any header file, we need to declare and
+                define our own functions according to the syntax.</p>
+
+            <p style="font-size: 19px;"><br>Advantages of User-Defined Functions :<br><br></p>
+            <ul>
+                <li>Changeable functions can be modified as per need.</li>
+                <li>The Code of these functions is reusable in other programs.</li>
+                <li>These functions are easy to understand, debug and maintain.</li>
+            </ul>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Passing Parameters to Functions</p>
+            <p><br>The data passed when the function is being invoked is known as the Actual parameters. In the below
+                program, 10 and 30 are known as actual parameters. Formal Parameters are the variable and the data type
+                as mentioned in the function declaration. In the below program, a and b are known as formal parameters.
+            </p>
+
+            <p style="font-size: 19px;"><br>We can pass arguments to the C function in two ways:<br><br></p>
+            <ul>
+                <li>Pass by Value</li>
+                <li>Pass by Reference</li>
+            </ul>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>1. Pass by Value:</p>
+            <p><br>Parameter passing in this method copies values from actual parameters into formal function
+                parameters. As
+                a result, any changes made inside the functions do not reflect in the caller’s parameters. </p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>2. Pass by Reference:</p>
+            <p><br>The caller’s actual parameters and the function’s actual parameters refer to the same locations, so
+                any
+                changes made inside the function are reflected in the caller’s actual parameters.</p>
+        </div>
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Recursion</p>
+            <div class="line"></div>
+            <p>Recursion is the process of a function calling itself repeatedly till the given condition is satisfied. A
+                function that calls itself directly or indirectly is called a recursive function and such kind of
+                function calls are called recursive calls.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Recursive Functions</p>
+            <p><br>In C, a function that calls itself is called Recursive Function. The recursive functions contain a
+                call
+                to themselves somewhere in the function body. Moreover, such functions can contain multiple recursive
+                calls.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Recursion Case</p>
+            <p><br>The recursion case refers to the recursive call present in the recursive function. It decides what
+                type
+                of recursion will occur and how the problem will be divided into smaller subproblems. </p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Base Condition</p>
+            <p><br>The base condition specifies when the recursion is going to terminate. It is the condition that
+                determines the exit point of the recursion. It is important to define the base condition before the
+                recursive case otherwise, the base condition may never encounter and recursion might continue till
+                infinity</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Memory Management in Recursion</p>
+            <p><br>Like other functions, the data of a recursive function is stored in stack memory as a stack frame.
+                This
+                stack frame is removed once the function returns a value. In recursion,</p>
+
+            <ul>
+                <li>The function call occurs before returning a value, so the stack frames for each recursive call are
+                    placed on top of the existing stack frames in memory.</li>
+                <li>Once the topmost function returns a value, its stack frame is removed, and control is passed back to
+                    the function just before it, resuming execution after the point where the recursive call was made.
+                </li>
+                <li>The compiler uses an instruction pointer to keep track of the location to return to after the
+                    function execution is complete.</li>
+            </ul>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Stack Overflow</p>
+            <p><br>The program’s call stack has limited memory assigned to it by the operating system and is generally
+                enough for program execution. But if we have a recursive function that goes on for infinite times,
+                sooner or later, the memory will be exhausted, and no more data can be stored. This is called stack
+                overflow. In other words,</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Types of Recursions in C</p>
+            <p><br>In C, recursion can be classified into different types based on what kind of recursive case is
+                present. These types are:</p>
+
+            <p style="font-size: 19px;"><br>1) Direct Recursion<br><br></p>
+            <ul>
+                <li>Head Recursion</li>
+                <li>Tail Recursion</li>
+                <li>Tree Recursion</li>
+            </ul>
+
+            <p style="font-size: 19px;"><br>1) Indirect Recursion<br><br></p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>1. Direct Recursion</p>
+            <p><br>Direct recursion is the most common type of recursion, where a function calls itself directly within
+                its
+                own body. The recursive call can occur once or multiple times within the function due to which we can
+                further classify the direct recursion</p>
+
+            <p style="font-size: 19px;"><br>A. Head Recursion<br><br></p>
+            <p>The head recursion is a linear recursion where the position of its only recursive call is at the start of
+                the function. It is generally the first statement in the function.</p>
+
+            <p style="font-size: 19px;"><br>B. Tail Recursion<br><br></p>
+            <p>The tail recursion is also a liner recursion like head recursion, but the position of the recursive call
+                is at the end of the function. Due to this, the tail recursion can be optimized to minimize the stack
+                memory usage. This process is called Tail Call Optimization.</p>
+
+            <p style="font-size: 19px;"><br>C. Tree Recursion<br><br></p>
+            <p>In tree recursion, there are multiple recursive calls present in the body of the function. Due to this,
+                while tracing the program flow, it makes a tree-like structure, hence the name Tree Recursion.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>2. Indirect Recursion</p>
+            <p><br>Indirect recursion is an interesting form of recursion where a function calls another function, which
+                eventually calls the first function or any other function in the chain, leading to a cycle of function
+                calls. In other words, the functions are mutually recursive. This type of recursion involves multiple
+                functions collaborating to solve a problem.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Applications of Recursion in C</p>
+            <P><br>Recursion is widely used to solve different kinds of problems from simple ones like printing linked
+                lists
+                to being extensively used in AI. Some of the common uses of recursion are:<br><br></P>
+
+            <ul>
+                <li>Tree-Graph Algorithms</li>
+                <li>Mathematical Problems</li>
+                <li>Divide and Conquer</li>
+                <li>Dynamic Programming</li>
+                <li>In Postfix to Infix Conversion</li>
+                <li>Searching and Sorting Algorithms</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Array</p>
+            <div class="line"></div>
+
+            <p>An array in C is a fixed-size collection of similar data items stored in contiguous memory locations. It
+                can be used to store the collection of primitive data types such as int, char, float, etc., and also
+                derived and user-defined data types such as pointers, structures, etc.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Array Declaration</p>
+            <p><br>In C, we have to declare the array like any other variable before using it. We can declare an array
+                by
+                specifying its name, the type of its elements, and the size of its dimensions. When we declare an array
+                in C, the compiler allocates the memory block of the specified size to the array name.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Array Initialization</p>
+            <p><br>Initialization in C is the process to assign some initial value to the variable. When the array is
+                declared or allocated memory, the elements of the array contain some garbage value. So, we need to
+                initialize the array to some meaningful values by using initializer list is the list of values enclosed
+                within braces { } separated by a comma.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Accessing</p>
+            <p><br>We can access any element of the array by providing the position of the element, called the index.
+                Indexes start from 0. We pass the index inside square brackets [] with the name of the array.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Update Array Element</p>
+            <p><br>We can update the value of an element at the given index i in a similar way to accessing an element
+                by
+                using the array square brackets [] and assignment operator (=).</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ C Array Traversal</p>
+            <p><br>Traversal is the process in which we visit every element of the data structure. For C array
+                traversal, we
+                use loops to iterate through each element of the array.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Size of Array</p>
+            <p><br>The size of the array refers to the number of elements that can be stored in the array. We can
+                extract
+                the size using sizeof() operator.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Passing array to Function</p>
+            <p><br>In C, arrays are passed to functions using pointers, as the array name decays to a pointer to the
+                first
+                element. There are three common methods:<br><br></p>
+            <ul>
+                <li>Unsized array notation, where the array is passed as a pointer without specifying its size.</li>
+                <li>Sized array notation, where the size is included in the declaration for clarity, but it’s still
+                    passed as a pointer.</li>
+                <li>Pointer notation, where the array is explicitly passed as a pointer, often along with its size.</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Multidimensional Array in C</p>
+            <p><br>In the above, we only discussed one-dimension array. Multi-dimensional arrays in C are arrays that
+                grow
+                in multiple directions or dimensions. A one-dimensional array grows linearly, like parallel to the
+                X-axis, while in a multi-dimensional array, such as a two-dimensional array, the elements can grow along
+                both the X and Y axes.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Two-Dimensional Array in C</p>
+            <p><br>A Two-Dimensional array or 2D array in C is an array that has exactly two dimensions. They can be
+                visualized in the form of rows and columns organized in a two-dimensional plane.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Three-Dimensional Array in C</p>
+            <p><br>Another popular form of a multi-dimensional array is Three-Dimensional Array or 3D Array. A 3D array
+                has
+                exactly three dimensions. It can be visualized as a collection of 2D arrays stacked on top of each other
+                to create the third dimension.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Relationship between Arrays and Pointers</p>
+            <p><br>Arrays and Pointers are closely related to each other such that we can use pointers to perform all
+                the
+                possible operations of the array. The array name is a constant pointer to the first element of the array
+                and the array decays to the pointers when passed to the function.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Properties of Arrays in C</p>
+            <p><br>It is very important to understand the properties of the C array so that we can avoid bugs while
+                using
+                it. The following are the main properties of an array in C:<br><br></p>
+
+            <ul>
+                <li>The array in C is a fixed-size collection of elements. The size of the array must be known at the
+                    compile time, and it cannot be changed once it is declared.</li>
+                <li>We can only store one type of element in an array.</li>
+                <li>The array index always starts with 0 in C language. It means that the index of the first element of
+                    the array will be 0 and the last element will be N – 1.</li>
+                <li>All the elements in the array are stored continuously one after another in the memory.</li>
+                <li>The array in C provides random access to its element i.e we can get to a random element at any index
+                    of the array in constant time complexity just by using its index number.</li>
+                <li>There is no index out-of-bounds checking in C.</li>
+            </ul>
+        </div>
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Array</p>
+            <div class="line"></div>
+            <p>A String in C programming is a sequence of characters terminated with a null character ‘\0’. The C String
+                is work as an array of characters. The difference between a character array and a C string is that the
+                string in C is terminated with a unique character ‘\0’.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Declaration</p>
+            <p><br>Declaring a string in C is as simple as declaring a one-dimensional array of character type. Below is
+                the
+                syntax for declaring a string.<br>In the above syntax string_name is any name given to the string
+                variable and size is used to define the length of the string, i.e. the number of characters strings will
+                store.<br>Like array, we can skip the size in the above statement:</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Initialization</p>
+            <p><br>We can initialize a string either by specifying the list of characters or string literal.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Accessing</p>
+            <p><br>We can access any character of the string by providing the position of the character, like in array.
+                We
+                pass the index inside square brackets [] with the name of the string.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Update</p>
+            <p><br>Updating a character in a string is also possible. We can update any character of a string by using
+                the
+                index of that character.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ String Length</p>
+            <p><br>To find the length of a string, you need to iterate through it until you reach the null character
+                (‘\0’).
+                The strlen() function from the C standard library is commonly used to get the length of a string.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ String Input</p>
+            <p><br>In C, reading a string from the user can be done using different functions, and depending on the use
+                case, one method might be chosen over another. Below, the common methods of reading strings in C will be
+                discussed, including how to handle whitespace, and concepts will be clarified to better understand how
+                string input works.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Using scanf()</p>
+            <p><br>The simplest way to read a string in C is by using the scanf() function.<br>There is a limitation
+                with
+                the scanf() function. scanf() will stop reading input as soon as it encounters a whitespace (space, tab,
+                or newline).</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Using scanf() with a Scanset</p>
+            <p><br>We can also use scanf() to read strings with spaces by utilizing a scanset. A scanset in scanf()
+                allows
+                specifying the characters to include or exclude from the input.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Using fgets()</p>
+            <p><br>If someone wants to read a complete string, including spaces, they should use the fgets() function.
+                Unlike scanf(), fgets() reads the entire line, including spaces, until it encounters a newline.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Passing Strings to Function</p>
+            <p><br>As strings are character arrays, we can pass strings to functions in the same way we pass an array to
+                a
+                function. Below is a sample program to do this: </p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Strings and Pointers in C</p>
+            <p><br>Similar to arrays, In C, we can create a character pointer to a string that points to the starting
+                address of the string which is the first character of the string. The string can be accessed with the
+                help of pointers as shown in the below example.</p>
+        </div>
+
+
+
+        <div class="box">
+            <p style="font-size:25px; ; color: orangered;">⋙ Pointer</p>
+            <div class="line"></div>
+
+            <p>A pointer is a variable that stores the memory address of another variable. Instead of holding a direct
+                value, it has the address where the value is stored in memory. This allows us to manipulate the data
+                stored at a specific memory location without actually using its variable. It is the backbone of
+                low-level memory manipulation in C.</p>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Declare a Pointer</p>
+            <p><br>A pointer is declared by specifying its name and type, just like simple variable declaration but with
+                an
+                asterisk (*) symbol added before the pointer’s name.<br> An integer type pointer can only point to an
+                integer. Similarly, a pointer of float type can point to a floating-point data, and so on.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Initialize the Pointer</p>
+            <p><br>Pointer initialization means assigning some address to the pointer variable. In C, the (&) addressof
+                operator is used to get the memory address of any variable. This memory address is then stored in a
+                pointer variable.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Dereference a Pointer</p>
+            <p><br>Accessing the pointer directly will just give us the address that is stored in the pointer.<br>We
+                have to
+                first dereference the pointer to access the value present at the memory address. This is done with the
+                help of dereferencing operator(*) (same operator used in declaration).</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Size of Pointers</p>
+            <p><br>The size of a pointer in C depends on the architecture (bit system) of the machine, not the data type
+                it
+                points to.</p>
+            <ul>
+                <li>The size of a pointer in C depends on the architecture (bit system) of the machine, not the data
+                    type it points to.</li>
+                <li>On a 64-bit system, all pointers typically occupy 8 bytes.</li>
+            </ul>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Special Types of Pointers</p>
+            <p><br>There are 4 special types of pointers that used or referred to in different contexts:</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>NULL Pointer</p>
+            <p><br>The NULL Pointers are those pointers that do not point to any memory location. They can be created by
+                assigning NULL value to the pointer. A pointer of any type can be assigned the NULL value.<br>NULL
+                pointers are generally used to represent the absence of any address. This allows us to check whether the
+                pointer is pointing to any valid memory location by checking if it is equal to NULL.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Void Pointer</p>
+            <p><br>The void pointers in C are the pointers of type void. It means that they do not have any associated
+                data
+                type. They are also called generic pointers as they can point to any type and can be typecasted to any
+                type.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Wild Pointers</p>
+            <p><br>The wild pointers are pointers that have not been initialized with something yet. These types of
+                C-pointers can cause problems in our programs and can eventually cause them to crash. If values are
+                updated using wild pointers, they could cause data abort or data corruption.</p>
+
+            <p style="font-size: 19px; color: aquamarine;"><br><br>Dangling Pointer</p>
+            <p><br>A pointer pointing to a memory location that has been deleted (or freed) is called a dangling
+                pointer.
+                Such a situation can lead to unexpected behavior in the program and also serve as a source of bugs in C
+                programs.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ C Pointer Arithmetic</p>
+            <p><br>The pointer arithmetic refers to the arithmetic operations that can be performed on a pointer. It is
+                slightly different from the ones that we generally use for mathematical calculations as only a limited
+                set of operations can be performed on pointers. These operations include:<br><br></p>
+
+            <ul>
+                <li>Increment/Decrement</li>
+                <li>Addition/Subtraction of Integer</li>
+                <li>Subtracting Two Pointers of Same Type</li>
+                <li>Comparing/Assigning Two Pointers of Same Type</li>
+                <li>Comparing/Assigning with NULL</li>
+            </ul>
+
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ C Pointers and Arrays</p>
+            <p><br>In C programming language, pointers and arrays are closely related. An array name acts like a pointer
+                constant. The value of this pointer constant is the address of the first element. For example, if we
+                have an array named val, then val and &val[0] can be used interchangeably.<br><br>If we assign this
+                value to a non-constant pointer to array of the same type, then we can access the elements of the array
+                using this pointer. Not only that, as the array elements are stored continuously, we can use pointer
+                arithmetic operations such as increment, decrement, addition, and subtraction of integers on pointer to
+                move between array elements.<br><br>This concept is not limited to the one-dimensional array, we can
+                refer to a multidimensional array element as well using pointers.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Constant Pointers</p>
+            <p><br>In constant pointers, the memory address stored inside the pointer is constant and cannot be modified
+                once it is defined. It will always point to the same memory address.<br>We can also create a pointer to
+                constant or even constant pointer to constant. Refer to this article to know more – Constant pointer,
+                Pointers to Constant and Constant Pointers to Constant</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Pointer to Function</p>
+            <p><br>A function pointer is a type of pointer that stores the address of a function, allowing functions to
+                be
+                passed as arguments and invoked dynamically. It is useful in techniques such as callback functions,
+                event-driven programs.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Multilevel Pointers</p>
+            <p><br>In C, we can create multi-level pointers with any number of levels such as – ***ptr3, ****ptr4,
+                ******ptr5 and so on. Most popular of them is double pointer (pointer to pointer). It stores the memory
+                address of another pointer. Instead of pointing to a data value, they point to another pointer.</p>
+
+            <p style="font-size: 21px; color:aqua;"><br><br>▣ Uses of Pointers in C</p>
+            <p><br>The C pointer is a very powerful tool that is widely used in C programming to perform various useful
+                operations. It is used to achieve the following functionalities in C:<br><br></p>
+
+            <ul>
+                <li>Pass Arguments by Pointers</li>
+                <li>Accessing Array Elements</li>
+                <li>Return Multiple values from Function</li>
+                <li>Dynamic Memory Allocation</li>
+                <li>Implementing Data Structures</li>
+                <li>In System-Level Programming where memory addresses are useful.</li>
+                <li>To use in Control Tables.</li>
+            </ul>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EduHub</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="../img/EduHub.png" rel="icon">  
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box animate__animated animate__fadeIn">
+        <div class="logo-container">
+            <div class="eduhub-logo">
+                <span class="edu">Edu</span>
+                <span class="hub">hub</span>
+            </div>
+        </div>
+            <div class="auth-header">
+                <h2 class="animate__animated animate__fadeInDown">Welcome Back!</h2>
+                <p>Login to continue your learning journey</p>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group animate__animated animate__fadeInLeft">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group animate__animated animate__fadeInRight">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="auth-button animate__animated animate__pulse">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>New to EduHub? <a href="signup.html" class="signup-link">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

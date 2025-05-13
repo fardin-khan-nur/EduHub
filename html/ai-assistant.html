@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduhub - AI Assistant</title>
+    <link rel="stylesheet" href="../css/ai-assistant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="../img/EduHub.png" rel="icon">  
+    <link rel="stylesheet" href="../css/compiler.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navlogo">
+            <img src="../Image/ChatGPT Image2 Apr 4, 2025, 10_37_33 AM.png" alt="Eduhub Logo">
+        </div>
+
+        <div class="navtext">
+            <ol>
+                <li class="hov-home"><a href="home.html">Home</a></li>
+                <li class="hov-courses"><a href="courses.html">Courses</a></li>
+                <li class="hov-roadmap"><a href="roadmap.html">Roadmap</a></li>
+                <li class="hov-compiler"><a href="compiler.html">Compiler</a></li>
+                <li class="hov-competitive"><a href="competitive.html">Competitive</a></li>
+                <li class="hov-aiassiatant"><a href="ai-assistant.html">AI Assistant</a></li>
+                <li class="hov-profile"><a href="profile.html">Profile</a></li>
+            </ol>
+        </div>
+    </div>
+
+        <!-- AI Assistant Interface -->
+    <div class="ai-container">
+        <div class="chat-interface">
+            <!-- Chat History -->
+            <div class="chat-history" id="chatHistory">
+                <div class="message ai-message">
+                    <div class="message-content">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-text">
+                            Hello! I'm your EduHub AI Assistant. How can I help you with programming today?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="Ask me anything about programming..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-tools">
+                    <button class="tool-button" title="Upload Code">
+                        <i class="fas fa-code"></i>
+                    </button>
+                    <button class="tool-button" title="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button class="tool-button" title="Clear Chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            <span>Processing your request...</span>
+        </div>
+    </div>
+
+
+    <script src="../js/timeAndUser.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    border: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Nav Bar */
+.navbar {
+    z-index: 1000;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.navlogo {
+    height: 45px;
+    width: 90px;
+    margin-left: 30px;
+}
+
+.navlogo img {
+    height: 45px;
+    width: 90px;
+}
+
+.navtext ol {
+    display: flex;
+    gap: 40px;
+    margin-left: 25px;
+    font-family: cursive;
+    color: rgb(75, 84, 81);
+    font-weight: bold;
+}
+
+.navtext .hov-home a:hover,
+.navtext .hov-courses:hover,
+.navtext .hov-roadmap:hover,
+.navtext .hov-compiler:hover,
+.navtext .hov-competitive:hover,
+.navtext .hov-aiassiatant:hover,
+.navtext .hov-profile:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+
+.navtext ol li {
+    list-style: none;
+}
+
+.navtext ol li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navtext ol li a:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+
+.body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    /* Offset for fixed navbar */
+    padding-top: 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make compiler area big and responsive */
+.compiler {
+    width: 95vw;
+    max-width: 1600px;
+    min-width: 320px;
+    height: 80vh;
+    min-height: 350px;
+    max-height: 900px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border-radius: 7px;
+    overflow: hidden;
+    background: none;
+    transition: width 0.2s, height 0.2s;
+    display: flex;
+}
+
+/* Responsive iframe if used */
+.compiler iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    background: #fff;
+}
+
+/* Large screens */
+@media (min-width: 1800px) {
+    .compiler {
+        max-width: 1800px;
+        max-height: 1000px;
+        height: 85vh;
+    }
+}
+@media (max-width: 1200px) {
+    .compiler {
+        width: 98vw;
+        max-width: 100vw;
+        height: 60vh;
+        min-height: 250px;
+    }
+}
+@media (max-width: 900px) {
+    .navtext ol { gap: 20px; font-size: 0.98rem; }
+    .navlogo { margin-left: 10px; }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-bottom: 4px;
+    }
+    .navlogo {
+        margin: 10px 0 0 10px;
+    }
+    .navtext ol {
+        margin-left: 10px;
+        gap: 10px;
+        font-size: 0.97em;
+        flex-wrap: wrap;
+    }
+    .body {
+        padding-top: 80px;
+    }
+    .compiler {
+        width: 99vw;
+        min-width: 0;
+        height: 45vh;
+        min-height: 160px;
+    }
+}
+@media (max-width: 600px) {
+    .navbar { box-shadow: 0 0 .7px #000; }
+    .body {
+        padding-top: 68px;
+    }
+    .compiler {
+        width: 100vw;
+        min-width: 0;
+        height: 30vh;
+        min-height: 100px;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 400px) {
+    .body {
+        padding-top: 60px;
+    }
+    .compiler {
+        width: 100vw;
+        border-radius: 2px;
+        height: 20vh;
+        min-height: 60px;
+    }
+}

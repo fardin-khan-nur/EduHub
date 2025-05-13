@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - Welcome</title>
+    <link rel="stylesheet" href="index/index.css">
+    <link href="img/EduHub.png" rel="icon">  
+</head>
+<body>
+    <div class="splash-container">
+        <div class="logo-wrapper">
+            <div class="eduhub-logo">
+                <div class="logo-glow"></div>
+                <span class="edu animate__animated">Edu</span>
+                <span class="hub animate__animated">hub</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="particles"></div>
+        </div>
+        <button id="soundToggle" class="sound-toggle">
+            <span class="sound-on">🔊</span>
+            <span class="sound-off">🔇</span>
+        </button>
+    </div>
+
+    <audio id="bgMusic" preload="auto" autoplay>
+    <source src="index/intro.mp3" type="audio/mpeg">
+    </audio>
+
+    
+    <script src="index/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - Competitive Programming</title>
+    <link rel="stylesheet" href="../css/competitive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="../img/EduHub.png" rel="icon">  
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="navbar">
+        <div class="navlogo">
+            <img src="../Image/ChatGPT Image2 Apr 4, 2025, 10_37_33 AM.png">
+        </div>
+        <div class="navtext">
+            <ol>
+                <li class="hov-home"><a href="home.html">Home</a></li>
+                <li class="hov-courses"><a href="courses.html">Courses</a></li>
+                <li class="hov-roadmap"><a href="roadmap.html">Roadmap</a></li>
+                <li class="hov-compiler"><a href="compiler.html">Compiler</a></li>
+                <li class="hov-competitive"><a href="competitive.html">Competitive</a></li>
+                <li class="hov-aiassiatant"><a href="ai-assistant.html">AI Assistant</a></li>
+                <li class="hov-profile"><a href="profile.html">Profile</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <main class="competitive-container">
+        <!-- Problems List View -->
+        <div id="problemsListView">
+            <section class="competitive-hero">
+                <h1>Competitive Programming</h1>
+                <p>Enhance your problem-solving skills with curated programming challenges</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50</span>
+                        <span class="stat-label">Problems</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Difficulty Levels</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                </div>
+            </section>
+            <section class="problem-filters">
+                <div class="filter-group">
+                    <select id="difficultyFilter">
+                        <option value="all">All Difficulties</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="arrays">Arrays</option>
+                        <option value="strings">Strings</option>
+                        <option value="math">Mathematics</option>
+                        <option value="dp">Dynamic Programming</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <input type="text" id="searchInput" placeholder="Search problems...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </section>
+            <section class="problems-grid" id="problemsContainer">
+                <!-- Problems will be dynamically inserted here -->
+            </section>
+        </div>
+
+        <!-- Single Problem View -->
+        <div id="singleProblemView" class="single-problem-view" style="display: none;">
+            <div class="problem-header">
+                <button id="backToProblems" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Problems
+                </button>
+                <div class="problem-meta">
+                    <h2 id="activeProblemTitle"></h2>
+                    <div class="problem-details">
+                        <span id="activeProblemDifficulty" class="difficulty-badge"></span>
+                        <span id="activeProblemCategory"></span>
+                        <span id="timeLimit"></span>
+                        <span id="memoryLimit"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="problem-body">
+                <div class="problem-description-section">
+                    <h3>Problem Description</h3>
+                    <div id="activeProblemDescription"></div>
+                </div>
+                <div class="examples-section">
+                    <div class="example-input">
+                        <h3>Sample Input:</h3>
+                        <pre id="activeProblemInput"></pre>
+                    </div>
+                    <div class="example-output">
+                        <h3>Sample Output:</h3>
+                        <pre id="activeProblemOutput"></pre>
+                    </div>
+                </div>
+                <div class="solution-section">
+                    <h3>Submit Your Solution</h3>
+                    <div class="code-editor-container">
+                        <select id="languageSelect">
+                            <option value="cpp">C++</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                        </select>
+                        <textarea id="codeEditor" placeholder="Write your solution here..."></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button id="submitCode" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Solution
+                        </button>
+                        <button id="testCode" class="test-btn">
+                            <i class="fas fa-vial"></i> Test Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/competitive.js"></script>
+    <script src="../js/codeWorker.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduHub - User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="../img/EduHub.png" rel="icon">  
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navlogo">
+            <img src="../Image/ChatGPT Image2 Apr 4, 2025, 10_37_33 AM.png" alt="Eduhub Logo">
+        </div>
+        <div class="navtext">
+            <ol>
+                <li class="hov-home"><a href="home.html">Home</a></li>
+                <li class="hov-courses"><a href="courses.html">Courses</a></li>
+                <li class="hov-roadmap"><a href="roadmap.html">Roadmap</a></li>
+                <li class="hov-compiler"><a href="compiler.html">Compiler</a></li>
+                <li class="hov-competitive"><a href="competitive.html">Competitive</a></li>
+                <li class="hov-ai-assistant"><a href="ai-assistant.html">AI Assistant</a></li>
+                <li class="hov-profile"><a href="profile.html" class="active">Profile</a></li>
+            </ol>
+        </div>
+        <!-- Date/time and username for dynamic JS -->
+        <div id="currentDateTime" class="datetime-display"></div>
+        <div id="userLogin" class="user-login-display"></div>
+        <button class="logout-btn" onclick="logout()">
+            <i class="fa fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <main class="profile-container">
+        <section class="profile-header">
+            <div class="profile-cover"></div>
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="../img/Logo-Anonymous.png" alt="Profile Picture" id="profileAvatar">
+                    <img src="../img/tamim.jpg" alt="Profile Picture" id="profileAvatar">
+                    <img src="../img/tan.jpg" alt="Profile Picture" id="profileAvatar">
+                </div>
+                <div class="profile-details">
+                    <h1 id="profileName">Loading...</h1>
+                    <p class="username" id="profileUsername">@username</p>
+                    <p class="joined-date" id="profileJoinDate">Member since: Loading...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-stats" id="profileStats">
+            <!-- Populated by JS -->
+        </section>
+        <section class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="progress">Progress</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+                <button class="tab-btn" data-tab="certificates">Certificates</button>
+            </div>
+            <div class="tab-content" id="progress-tab">
+                <h2>Learning Progress</h2>
+                <div class="course-progress" id="courseProgress">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            <!-- Additional tab contents could be added here -->
+        </section>
+    </main>
+    <script src="../js/profile.js"></script>
+    <script src="../login-signup/auth.js"></script>
+</body>
+</html>

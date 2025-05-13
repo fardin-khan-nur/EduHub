@@ -1,0 +1,789 @@
+* {
+    margin: 0;
+    border: 0;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Small modern pill buttons (same shape/size for both) */
+
+.pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 74px;
+    padding: 4px 16px 4px 9px;
+    margin: 0 5px;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 0.97rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    border: none;
+    border-radius: 19px;
+    background: #2dcfc4;
+    color: #fff;
+    box-shadow: 0 1.5px 6px rgba(44,62,80,0.03);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.16s, transform 0.12s;
+    border: 3px solid #fff;
+    filter: drop-shadow(0 1.5px 1.5px #0001);
+    user-select: none;
+    min-height: 29px;
+}
+
+.pill-btn .icon {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.20);
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 2px #0001;
+}
+
+.pill-btn.login {
+    background: linear-gradient(120deg, #44c1ed 0%, #22bbbc 80%);
+}
+
+.pill-btn.signup {
+    background: linear-gradient(120deg, #ffb377 0%, #ff7961 80%);
+}
+
+.pill-btn:hover, .pill-btn:focus {
+    box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.14), 0 1px 4px rgba(44, 62, 80, 0.09);
+    transform: translateY(-1px) scale(1.04);
+    outline: none;
+}
+
+.pill-btn:active {
+    transform: scale(0.96);
+    filter: brightness(0.97);
+}
+
+
+
+
+.navbar {
+    z-index: 1000;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+    align-items: center;
+    position: fixed;
+    opacity: .9;
+    top: 0;
+    left: 0;
+}
+
+.navlogo {
+    height: 45px;
+    width: 90px;
+    margin-left: 30px;
+}
+
+.navlogo img {
+    height: 45px;
+    width: 90px;
+}
+
+.navtext ol {
+    display: flex;
+    gap: 40px;
+    margin-left: 25px;
+    font-family: cursive;
+    color: rgb(75, 84, 81);
+    font-weight: bold;
+}
+
+.navtext .hov-home a:hover,
+.navtext .hov-courses:hover,
+.navtext .hov-roadmap:hover,
+.navtext .hov-compiler:hover,
+.navtext .hov-competitive:hover,
+.navtext .hov-aiassiatant:hover,
+.navtext .hov-profile:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+
+.navtext ol li {
+    list-style: none;
+}
+
+.navtext ol li a {
+    text-decoration: none;
+    color: black;
+}
+.navtext ol li a:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+
+.login {
+    background-color: aliceblue;
+    margin-left: 158px;
+    border-radius: 7px;
+    padding: 7px 12px;
+    border: 1px solid transparent;
+}
+
+.login:hover {
+    border: 1px solid orange;
+    transition: border 0.5s ease;
+}
+
+.singup {
+    background-color: orange;
+    padding: 7px 12px;
+    border-radius: 7px;
+    margin-left: 15px;
+    color: aliceblue;
+}
+
+.singup:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+/* Responsive adjustments for navbar */
+@media (max-width: 1100px) {
+    .navtext ol {
+        gap: 20px;
+        margin-left: 10px;
+    }
+    .login {
+        margin-left: 40px;
+    }
+    .navlogo {
+        margin-left: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 60px;
+        padding-bottom: 5px;
+    }
+    .navtext ol {
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 15px;
+    }
+    .login, .singup {
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        height: auto;
+    }
+    .navlogo {
+        margin: 0 0 5px 10px;
+    }
+    .navtext ol {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .login, .singup {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+/* body */
+.container {
+    width: 100%;
+    min-height: 620px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 510px;
+    background-color: rgb(210, 230, 228);
+    border-radius: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 0;
+}
+
+.box .ring {
+    width: 700px;
+    min-width: 200px;
+    animation-name: ring;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes ring {
+    from {
+        transform: translateX(-350px) translateY(-50px);
+    }
+    to {
+        transform: translateX(-350px) translateY(-50px) rotate(360deg);
+    }
+}
+
+/* Hero content responsive layout */
+.box .text {
+    position: relative;
+    z-index: 10;
+    margin-left: 130px;
+    min-width: 240px;
+    flex: 1 1 300px;
+}
+
+.container .box .text h1 {
+    color: rgb(11, 112, 119);
+    line-height: 1.5;
+    font-size: 2.3rem;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.container .box .text h3 {
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 38px;
+}
+
+.button1, .button2 {
+    border-radius: 40px;
+    padding: 12px 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.button1 {
+    background-color: rgb(11, 112, 119);
+    color: aliceblue;
+    animation-name: tamim;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tamim {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+
+.button1:hover, .button2:hover {
+    box-shadow: 1px 1px 4px black;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.button2 {
+    background-color: rgb(249, 193, 89);
+    color: rgb(80, 80, 80);
+}
+
+.button2:hover {
+    transform: scale(1.02);
+}
+
+/* Animated images slider area */
+@media (max-width: 1350px) {
+    .box .Animation1st,
+    .box .Animation2nd,
+    .box .Animation3rd,
+    .box .Animation4th,
+    .box .Animation5th,
+    .box .Animation6th,
+    .box .Animation7th {
+        left: auto !important;
+        right: 10px !important;
+        max-width: 190px;
+        max-height: 200px;
+    }
+    .box .text {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .box .text {
+        margin-left: 30px;
+    }
+    .box {
+        height: 420px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        min-height: 450px;
+    }
+    .box {
+        height: 340px;
+        flex-direction: column;
+        padding: 10px 0;
+        align-items: flex-start;
+    }
+    .box .text {
+        margin: 30px 15px 10px 15px;
+        max-width: 95vw;
+    }
+    .box .ring {
+        width: 350px;
+        min-width: 100px;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        min-height: 300px;
+        padding-top: 80px;
+    }
+    .box {
+        flex-direction: column;
+        height: auto;
+        min-height: 280px;
+        border-radius: 0;
+        padding: 0 0 20px 0;
+    }
+    .box .text {
+        margin: 20px 5vw 10px 5vw;
+        font-size: 1rem;
+    }
+    .container .box .text h1 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+    }
+    .container .box .text h3 {
+        font-size: .97rem;
+    }
+    .box .ring {
+        display: none;
+    }
+    .button1, .button2 {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+}
+
+/* Messy Slider Fix & Responsive Carousel */
+.slider-animations {
+    position: relative;
+    width: 500px;
+    max-width: 90vw;
+    min-width: 180px;
+    height: 320px;
+    margin: auto 0 auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+    .slider-animations {
+        width: 260px;
+        height: 160px;
+    }
+}
+@media (max-width: 700px) {
+    .slider-animations {
+        width: 96vw;
+        height: 120px;
+        min-width: 120px;
+    }
+}
+
+/* Animation images in slider: fix stacking and responsiveness */
+.slider-animations img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    pointer-events: none;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.slider-animations img.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+@media (max-width: 700px) {
+    .slider-animations img {
+        max-width: 100%;
+        max-height: 90px;
+    }
+}
+
+/* Remove old absolute left on .box .AnimationX. Instead, use the slider container above */
+
+/* Circle position responsive */
+.circle {
+    z-index: 1;
+    height: 130px;
+    width: 130px;
+    background-color: rgb(210, 230, 228);
+    border-radius: 70px;
+    position: absolute;
+    left: 50%;
+    top: 430px;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 900px) {
+    .circle {
+        height: 80px;
+        width: 80px;
+        top: 270px;
+    }
+}
+@media (max-width: 700px) {
+    .circle {
+        height: 40px;
+        width: 40px;
+        top: 120px;
+    }
+}
+
+/* Features section responsive */
+.why {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(253, 102, 31);
+}
+
+.feature {
+    display: flex;
+    width: 85%;
+    height: 350px;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.language,
+.compiler,
+.ai,
+.competitive,
+.roadmap {
+    width: 170px;
+    height: 235px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.15);
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language:hover,
+.compiler:hover,
+.ai:hover,
+.competitive:hover,
+.roadmap:hover {
+    transform: translateY(-13px);
+    transition: transform 0.4s ease;
+}
+
+.feature-name {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 4px;
+    border-radius: 13px;
+    position: relative;
+    bottom: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(240, 141, 11);
+    left: 14px;
+    width: 133px;
+    justify-content: center;
+}
+
+.feature-text {
+    display: flex;
+    padding: 0px 10px 10px 10px;
+    font-size: 13px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(71, 71, 71);
+}
+
+@media (max-width: 1050px) {
+    .feature {
+        width: 98%;
+        height: auto;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .feature {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .language, .compiler, .ai, .competitive, .roadmap {
+        width: 46vw;
+        min-width: 135px;
+        max-width: 180px;
+        margin-bottom: 12px;
+    }
+    .feature-name {
+        width: 90px;
+        left: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .feature {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+    }
+    .language, .compiler, .ai, .competitive, .roadmap {
+        width: 92vw;
+        max-width: 320px;
+        min-width: 120px;
+        height: 180px;
+    }
+    .feature-name {
+        width: 85%;
+        left: 0;
+        font-size: 0.96rem;
+    }
+}
+
+/* Footer Responsive */
+.footer {
+    background-color: rgb(51, 51, 51);
+    padding: 60px 10vw 0px 10vw;
+    min-width: 0;
+}
+
+.foottop {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.eduhub,
+.quicklinks,
+.contact {
+    height: 140px;
+    width: 30%;
+    min-width: 180px;
+    margin-bottom: 10px;
+}
+
+.footheader {
+    color: azure;
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footcontant {
+    color: aliceblue;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footline {
+    margin-top: 10px;
+    height: .9px;
+    width: 100%;
+    background-color: rgb(120, 119, 119);
+}
+
+.footbottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    height: 100px;
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding: 30px 4vw 0 4vw;
+    }
+    .foottop {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .eduhub,
+    .quicklinks,
+    .contact {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+}
+
+/* ... (your existing CSS, keep as is) ... */
+
+/* Add for slider animation */
+.slider-animations {
+    position: relative;
+    width: 500px;
+    max-width: 90vw;
+    min-width: 180px;
+    height: 320px;
+    margin: auto 0 auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+    overflow: hidden;
+}
+
+/* Slider images: default hidden and placed absolutely */
+.slider-animations img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+    z-index: 1;
+}
+
+/* Sliding-in: from right to center */
+.slider-animations img.slide-in {
+    animation: slideIn 1s forwards;
+    z-index: 2;
+}
+
+/* Sliding-out: from center to left */
+.slider-animations img.slide-out {
+    animation: slideOut 1s forwards;
+    z-index: 2;
+}
+
+/* Active image after animation */
+.slider-animations img.active {
+    opacity: 1;
+    left: 0;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+/* Slide in keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        left: 80px;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+/* Slide out keyframes */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        left: 0;
+    }
+    to {
+        opacity: 0;
+        left: -80px;
+    }
+}
+
+/* Responsive sizing for slider */
+@media (max-width: 1100px) {
+    .slider-animations {
+        width: 260px;
+        height: 160px;
+    }
+}
+@media (max-width: 700px) {
+    .slider-animations {
+        width: 96vw;
+        height: 120px;
+        min-width: 120px;
+    }
+    .slider-animations img {
+        max-width: 100%;
+        max-height: 90px;
+    }
+}
+
+/* Darker, more prominent shadow for feature cards */
+.feature-card {
+    box-shadow:
+        0 4px 24px rgba(44, 62, 80, 0.20),
+        0 1.5px 8px rgba(44,62,80,0.18),
+        0 8px 32px 0 rgba(0,0,0,0.22);
+    border-radius: 16px;
+    transition: box-shadow 0.34s cubic-bezier(.39,.58,.57,1.12), transform 0.18s;
+    background: #fff;
+}
+.feature-card:hover {
+    box-shadow:
+        0 8px 36px 0 rgba(44, 62, 80, 0.34),
+        0 4px 24px rgba(44,62,80,0.25),
+        0 16px 56px 0 rgba(0,0,0,0.28);
+    transform: translateY(-9px) scale(1.035);
+    z-index: 3;
+}

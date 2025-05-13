@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EduHub</title>
+    <link rel="stylesheet" href="auth-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="../img/EduHub.png" rel="icon">  
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box animate__animated animate__fadeIn">
+        <div class="logo-container">
+            <div class="eduhub-logo">
+                <span class="edu">Edu</span>
+                <span class="hub">hub</span>
+            </div>
+        </div>
+            <div class="auth-header">
+                <h2 class="animate__animated animate__fadeInDown">Create Your Account</h2>
+                <p>Join EduHub Learning Platform</p>
+            </div>
+            <form id="signupForm" class="auth-form">
+                <div class="form-group animate__animated animate__fadeInLeft">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group animate__animated animate__fadeInRight">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group animate__animated animate__fadeInLeft">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group animate__animated animate__fadeInRight">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="auth-button animate__animated animate__pulse">Create Account</button>
+            </form>
+            <div class="auth-footer animate__animated animate__fadeInUp">
+                <p>Already have an account? <a href="login.html">Login Here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

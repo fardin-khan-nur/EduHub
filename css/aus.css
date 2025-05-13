@@ -1,0 +1,349 @@
+/* Global box-sizing and body margin */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Responsive body margin and font settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #fff;
+    color: #232323;
+    line-height: 1.7;
+}
+
+/* Main container for About page */
+.body {
+    background-color: #eaf6f5;
+    min-height: 100vh;
+    padding-top: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .body {
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-top: 60px;
+    }
+}
+@media (max-width: 500px) {
+    .body {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 53px;
+    }
+}
+
+/* --- NAVBAR (kept as before, with animation) --- */
+.navbar {
+    z-index: 1000;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    position: fixed;
+    opacity: .95;
+    box-shadow: 0px .1px 3px;
+    top: 0;
+    left: 0;
+    animation: navFadeIn 1.1s;
+}
+@keyframes navFadeIn {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+.navlogo {
+    height: 45px;
+    width: 90px;
+    margin-left: 30px;
+}
+.navlogo img {
+    height: 45px;
+    width: 90px;
+    animation: logoPop 1.5s;
+}
+@keyframes logoPop {
+    from { transform: scale(0.7) rotate(-15deg); opacity: 0; }
+    60% { transform: scale(1.1) rotate(3deg); opacity: 1; }
+    to { transform: scale(1) rotate(0); opacity: 1; }
+}
+.navtext ol {
+    display: flex;
+    gap: 40px;
+    margin-left: 25px;
+    font-family: cursive;
+    color: rgb(75, 84, 81);
+    font-weight: bold;
+}
+.navtext .hov-home a:hover,
+.navtext .hov-courses:hover,
+.navtext .hov-roadmap:hover,
+.navtext .hov-compiler:hover,
+.navtext .hov-competitive:hover,
+.navtext .hov-aiassiatant:hover,
+.navtext .hov-profile:hover {
+    color: orange;
+    transition: color .3s ease;
+    animation: navItemPulse 0.4s;
+}
+@keyframes navItemPulse {
+    0% { color: orange; }
+    50% { color: #f6a933; }
+    100% { color: orange; }
+}
+.navtext ol li { list-style: none; }
+.navtext ol li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color .3s ease;
+}
+.navtext ol li a:hover {
+    color: orange;
+    transition: color .3s ease;
+}
+.navtext ol li a::after {
+    display: none !important;
+}
+.navtext ol li a {
+    text-decoration: none !important;
+}
+
+/* Heading Styles */
+.head {
+    padding: 10px 0 8px 0;
+    color: orange;
+    font-family: 'Segoe UI Semibold', 'Times New Roman', Times, serif;
+    text-shadow: 0.5px 0.5px 2px rgb(0 0 0 / 10%);
+    font-size: 2.15rem;
+    text-align: center;
+    width: 100%;
+    animation: headFadeIn 1.2s;
+}
+.head h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.body, main.body {
+    padding-top: 40px; /* Try lowering this if needed */
+}
+@keyframes headFadeIn {
+    from { opacity: 0; transform: translateY(-50px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Section Title Styles */
+.section-title {
+    font-weight: 600;
+    font-size: 1.23rem;
+    color: #0b7077;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-align: left;
+}
+@media (max-width: 700px) {
+    .head {
+        padding: 80px 0 12px 0;
+        font-size: 1.25rem;
+    }
+    .section-title {
+        font-size: 1.05rem;
+    }
+}
+
+/* Section Row Styles */
+.section-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 38px;
+    margin: 46px 0;
+    width: 100%;
+    animation: fadeInUp 1.1s;
+    flex-direction: row;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 12px 0 rgba(44, 62, 80, 0.06), 0 4px 24px rgba(44,62,80,0.04);
+    padding: 28px 38px;
+}
+.section-row.reverse {
+    flex-direction: row-reverse;
+}
+.section-img {
+    flex: 0 0 290px;
+    max-width: 320px;
+    background-color: #0b7077;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px #0b707733;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    min-height: 140px;
+    margin: 0;
+    animation: imgFadeIn 1.2s;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.section-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    object-fit: cover;
+}
+.section-img:hover, .section-img img:hover {
+    box-shadow: 0px 0px 16px 2px #2ad1bb88;
+    transform: scale(1.04) rotate(-1deg);
+}
+@keyframes imgFadeIn {
+    from { opacity: 0; transform: scale(0.97);}
+    to { opacity: 1; transform: scale(1);}
+}
+.section-text {
+    flex: 1 1 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.07rem;
+    text-align: justify;
+    min-width: 0;
+    line-height: 1.65;
+    color: #213b3b;
+    animation: fadeInUp 1.1s;
+}
+
+/* Responsive stacking on mobile */
+@media (max-width: 1050px) {
+    .section-row,
+    .section-row.reverse { gap: 16px; padding: 20px 7vw;}
+    .section-img { min-width: 100px; max-width: 150px;}
+}
+@media (max-width: 900px) {
+    .section-row,
+    .section-row.reverse { gap: 8px; padding: 14px 4vw;}
+    .section-img { min-width: 80px; max-width: 90px;}
+    .section-text { font-size: 0.98rem;}
+}
+@media (max-width: 750px) {
+    .section-row,
+    .section-row.reverse {
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 14px;
+        margin: 21px 0;
+        padding: 10px 2vw;
+    }
+    .section-img {
+        margin: 0 auto 8px auto;
+        max-width: 95vw;
+        min-width: 0;
+        width: 100%;
+        height: auto;
+    }
+    .section-img img {
+        max-width: 95vw;
+        height: auto;
+    }
+    .section-text {
+        padding: 0 2vw;
+        font-size: 0.97rem;
+    }
+}
+
+/* Mission section (special: image and text together) */
+.mission-section {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    background: black;
+    color: #e2f3f2;
+    border-radius: 20px;
+    margin: 54px auto 30px auto;
+    padding: 26px 36px;
+    font-size: 1.08rem;
+    box-shadow: 0px 0px 12px #0b707733;
+    animation: fadeInUp 1.2s;
+    max-width: 1050px;
+}
+.mission-section .section-img {
+    background: none;
+    box-shadow: none;
+    min-width: 130px;
+    max-width: 220px;
+    margin: 0;
+}
+.mission-section .section-img:hover{
+    box-shadow: 0px 0px 16px 2px #2ad1bb88;
+    transform: scale(1.04) rotate(-1deg);
+}
+.mission-section .section-img img {
+    width: 100%;
+    max-height: 180px;
+    border-radius: 13px;
+    box-shadow: 0 0 7px #f9a23b55;
+}
+.mission-section .mission-text {
+    flex: 1 1 0;
+    font-size: 1.08rem;
+    color: #e2f3f2;
+    padding: 0 0 0 10px;
+}
+.mission-section .mission-title {
+    font-size: 1.19rem;
+    color: orange;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .mission-section {
+        gap: 12px;
+        padding: 13px 8vw;
+        font-size: 1rem;
+    }
+    .mission-section .section-img { max-width: 80px;}
+    .mission-section .mission-text { font-size: 1rem;}
+}
+@media (max-width: 650px) {
+    .mission-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 4vw;
+        margin: 26px 0 10px 0;
+    }
+    .mission-section .section-img {
+        max-width: 95vw;
+        min-width: 0;
+    }
+    .mission-section .mission-text {
+        padding: 0;
+        font-size: 0.97rem;
+    }
+}
+
+/* For Head and Section spacing on mobile */
+@media (max-width: 600px) {
+    .head { padding: 65px 0 10px 0; font-size: 1.06rem;}
+}
+
+/* Selection color */
+::selection {
+    color: rgb(236, 166, 74);
+    background: #eaf6f5;
+}
